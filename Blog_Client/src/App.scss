@@ -1,0 +1,115 @@
+@import "./index.scss";
+
+header {
+  @include flex($justify: space-between, $align: center);
+  padding: 10px 300px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  .logo-span {
+    @include flex($align: center, $gap: 8px);
+    font-weight: 500;
+    img {
+      @include dimension(40px, 40px);
+    }
+  }
+  menu {
+    @include flex($align: center, $gap: 20px);
+    .a {
+      background: #000;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 12px;
+    }
+    .secondary {
+      background: transparent;
+      border: 1px solid $secondary-font-color;
+      color: $font-color;
+    }
+  }
+}
+
+#themain {
+  @include flex($direction: column, $gap: 60px, $align: center);
+  padding: 90px;
+  .heading {
+    font-size: 50px;
+    color: $font-color;
+  }
+  .card {
+    @include flex($justify: space-between, $align: center, $gap: 50px);
+    width: 65%;
+    .card-image {
+      @include dimension(40%, auto);
+      img {
+        @include dimension(250px, 160px);
+        border-radius: 8px;
+        object-fit: cover;
+      }
+    }
+    .card-content {
+      @include flex($gap: 10px, $direction: column);
+      .category {
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .title {
+        font-size: 28px;
+        color: $font-color;
+      }
+      .date {
+        font-size: 16px;
+        color: $secondary-font-color;
+      }
+    }
+  }
+}
+
+
+.loginContainer {
+  @include center();
+  .loginForm {
+    width: 50%;
+    @include flex($direction: column, $gap: 20px);
+    padding: 30px;
+    h1 {
+      font-size: 50px;
+      color: $font-color;
+    }
+    form {
+      width: 100%;
+      @include flex($direction: column, $gap: 20px);
+      div {
+        @include flex($direction: column, $gap: 5px);
+        width: 100%;
+      }
+      input {
+        width: 100%;
+        padding: 10px 20px;
+        border-radius: 8px;
+        border: 1px solid $secondary-font-color;
+      }
+
+      button[type="submit"] {
+        width: 100%;
+        background: #000;
+        color: #fff;
+        border: none;
+        padding: 14px 20px;
+        border-radius: 8px;
+        font-size: 12px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $secondary-font-color;
+      font-size: 15px;
+    }
+
+    .forgot-password {
+      width: 100%;
+      display: grid;
+      place-items: center;
+    }
+  }
+}

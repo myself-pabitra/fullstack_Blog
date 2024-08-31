@@ -28,13 +28,17 @@ header {
     }
   }
 }
-
+.loading {
+  @include center();
+  @include dimension(100%, 90vh);
+}
 #themain {
   @include flex($direction: column, $gap: 60px, $align: center);
   padding: 90px;
+
   .header_div {
     @include flex($direction: column, $align: center, $gap: 15px);
-    width: 50%;
+    width: 60%;
     .heading {
       font-size: 50px;
       color: $font-color;
@@ -88,6 +92,7 @@ header {
     }
     .card-content {
       @include flex($gap: 10px, $direction: column);
+      width: 50%;
       .category {
         font-size: 14px;
         font-weight: bold;

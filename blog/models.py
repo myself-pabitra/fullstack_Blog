@@ -31,7 +31,7 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
     status = models.CharField(max_length=10, default="published", choices=status_options)
-    
+    post_Thumbnail = models.ImageField(null=True, blank=True,upload_to='blogThumbnail/',default='blogThumbnail/default_image.jpg')
     objects = models.Manager()  # Default Manager
     postobjects = PostObjectManager()  # Custom Manager
 

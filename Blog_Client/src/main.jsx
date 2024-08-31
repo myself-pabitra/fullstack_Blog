@@ -6,6 +6,7 @@ import Content from "./pages/Content.jsx";
 import "./index.scss";
 import Layout from "./components/Layout.jsx";
 import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
 
 const routers = [
   {
@@ -23,6 +24,10 @@ const routers = [
       {
         path: "login",
         element: <Login />,
+      },
+      {
+        path: "register",
+        element: <Register />,
       },
     ],
   },

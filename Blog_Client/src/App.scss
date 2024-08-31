@@ -7,6 +7,7 @@ header {
   .logo-span {
     @include flex($align: center, $gap: 8px);
     font-weight: 500;
+    color: $font-color;
     img {
       @include dimension(40px, 40px);
     }
@@ -31,15 +32,54 @@ header {
 #themain {
   @include flex($direction: column, $gap: 60px, $align: center);
   padding: 90px;
-  .heading {
-    font-size: 50px;
-    color: $font-color;
+  .header_div {
+    @include flex($direction: column, $align: center, $gap: 15px);
+    width: 50%;
+    .heading {
+      font-size: 50px;
+      color: $font-color;
+    }
+    .search {
+      width: 100%;
+      background: #fff;
+      padding: 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      border: 1px solid rgba(247, 87, 188, 0.3);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    }
+    .search:focus {
+      outline: none;
+      box-shadow: none;
+      border-bottom: none;
+      border-radius: 20px 20px 0 0;
+      font-size: 16px;
+      transition: font-size 0.2s;
+    }
+    .categoryList {
+      @include flex($gap: 20px, $direction: column);
+      padding: 20px;
+      background: #fff;
+      border-radius: 0 0 20px 20px;
+      margin-top: -15px;
+      border: 1px solid rgba(247, 87, 188, 0.3);
+      border-top: none;
+      width: 100%;
+      box-shadow: rgba(252, 105, 198, 0.4) 0px 5px,
+        rgba(247, 87, 188, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px;
+      p {
+        width: 100%;
+        cursor: pointer;
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
   }
   .card {
-    @include flex($justify: space-between, $align: center, $gap: 50px);
+    @include flex($align: center, $justify: center, $gap: 50px);
     width: 65%;
     .card-image {
-      @include dimension(40%, auto);
+      // @include dimension(40%, auto);
       img {
         @include dimension(250px, 160px);
         border-radius: 8px;
@@ -64,11 +104,11 @@ header {
   }
 }
 
-
 .loginContainer {
   @include center();
+  height: 85vh;
   .loginForm {
-    width: 50%;
+    width: 40%;
     @include flex($direction: column, $gap: 20px);
     padding: 30px;
     h1 {
@@ -97,6 +137,7 @@ header {
         padding: 14px 20px;
         border-radius: 8px;
         font-size: 12px;
+        cursor: pointer;
       }
     }
 

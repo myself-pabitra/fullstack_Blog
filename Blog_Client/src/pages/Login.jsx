@@ -11,11 +11,21 @@ export default function Login() {
         <form>
           <div>
             <label htmlFor="email">Email</label>
-            <input type="email" name="email" id="email" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+            />
           </div>
           <div>
             <label htmlFor="password">Password</label>
-            <input type="password" name="password" id="password" />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter your Password"
+            />
           </div>
           <div>
             <button type="submit">Login</button>

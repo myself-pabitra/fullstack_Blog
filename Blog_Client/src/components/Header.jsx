@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <header>
-      <span className="logo-span">
+      <Link to="/" className="logo-span">
         <img src="logo.svg" alt="Header Logo" />
         DEZIRE
-      </span>
+      </Link>
       <menu>
         <Link to="/login" className="a secondary">
           Login

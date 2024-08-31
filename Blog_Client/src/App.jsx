@@ -1,11 +1,28 @@
+import { useState } from "react";
 import "./App.scss";
 import BlogCard from "./components/BlogCard";
-
+import CategoryList from "./components/CategoryList";
 function App() {
+  const [showList, setShowList] = useState(false);
+
   return (
     <>
       <main id="themain">
-        <h1 className="heading">Featured </h1>
+        <div className="header_div">
+          <h1 className="heading">Featured </h1>
+          <input
+            className="search"
+            placeholder="Search"
+            onFocus={() => {
+              setShowList(true);
+            }}
+            onBlur={() => {
+              setShowList(false);
+            }}
+            type="text"
+          />
+          {showList && <CategoryList />}
+        </div>
         <BlogCard
           category={"Design"}
           categoryColor={"#3b82f6"}
